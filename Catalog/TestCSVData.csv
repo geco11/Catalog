@@ -1,0 +1,5 @@
+Id,Mintmark,Mintage,Year,Country,Collection,Name,IsMagnetic,Weight,Diameter,Thickness,Condition,Quantity,Shape,Price,Nominal,PriceOfPurchase,Material
+0,P,10000,2000,USA,USA commemorative silver dollar,Statue of Liberty,false,26.73,38.1,2.7,MS-63,1,Round,50.00,1,45.00,Silver
+1,S,20000,1986,USA,USA commemorative silver dollar,Liberty,false,26.73,38.1,2.7,AU-50,1,Round,30.00,1,25.00,Silver
+2,D,15000,1992,USA,USA commemorative silver dollar,Columbus,false,26.73,38.1,2.7,PF-63,1,Round,40.00,1,35.00,Silver
+3,W,12000,2021,USA,USA commemorative silver dollar,Apollo 11,false,26.73,38.1,2.7,MS-63,1,Round,60.00,1,55.00,Silver

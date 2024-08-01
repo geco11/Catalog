@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coin.h" />
+    <ClInclude Include="Collection.h" />
     <ClInclude Include="CSVStorage.h" />
     <ClInclude Include="FileStorage.h" />
     <ClInclude Include="IStorage.h" />

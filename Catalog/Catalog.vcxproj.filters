@@ -44,5 +44,8 @@
     <ClInclude Include="CSVStorage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Collection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

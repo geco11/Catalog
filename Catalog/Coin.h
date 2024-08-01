@@ -2,6 +2,7 @@
 #include<iostream>
 class Coin
 {
+	size_t id;
 	char mintmark=-1;
 	int mintage=-1;
 	int year=-1;
@@ -13,6 +14,7 @@ class Coin
 	int thickness=-1;
 	char condition = -1;
 	int quantity = -1;
+	std::string country = "";
 	std::string shape="";
 	float price=-1;
 	float priceOfPurchase=-1;
