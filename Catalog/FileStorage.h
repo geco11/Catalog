@@ -14,6 +14,6 @@ public:
 protected:
 	std::string filePath;
 	virtual std::vector<Coin> getAllCoins()const=0;
-	virtual size_t newCoin(Coin coin)  =0;
+	virtual size_t coinToString(Coin coin)  =0;
 };
 
