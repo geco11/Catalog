@@ -2,6 +2,7 @@
 #include<iostream>
 class Coin
 {
+public:
 	size_t id;
 	char mintmark=-1;
 	int mintage=-1;

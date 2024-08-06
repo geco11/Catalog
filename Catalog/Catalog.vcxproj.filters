@@ -47,5 +47,8 @@
     <ClInclude Include="Collection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="csv.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

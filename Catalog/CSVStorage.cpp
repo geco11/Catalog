@@ -1,31 +1,26 @@
 #include "CSVStorage.h"
-
-Coin CSVStorage::getCoinById(size_t id)const
-{
-    return Coin();
-}
-
-Coin CSVStorage::saveCoin(Coin coin)
-{
-    return Coin();
-}
-
-std::vector<Coin> CSVStorage::getCoins(Coin coin)const
-{
-    return std::vector<Coin>();
-}
-
-int CSVStorage::loadCoins(std::string source)const
-{
-    return 0;
-}
-
+#include"csv.hpp"
+void fillCoin(Coin& coin, csv::CSVRow& row);
 std::vector<Coin> CSVStorage::getAllCoins()const
 {
-    return std::vector<Coin>();
+    csv::CSVReader reader(filePath,format);
+    std::vector<Coin> coins(reader.n_rows());
+    size_t i = 0;
+    for (auto& row : reader) {
+        fillCoin(coins[i++], row);
+    }
+    return coins;
 }
 
-size_t CSVStorage::newCoin(Coin coin)
+CSVStorage::CSVStorage(std::string path):FileStorage(path)
 {
-    return size_t();
+    format.delimiter(',');
+    format.header_row(0);
+}
+//Id,Mintmark,Mintage,Year,Country,Collection,Name,IsMagnetic,Weight,Diameter,Thickness,Condition,Quantity,Shape,Price,Nominal,PriceOfPurchase,Material
+void fillCoin(Coin& coin, csv::CSVRow& row)
+{
+    coin.id = row[0].get<size_t>();
+    coin.mintmark = row[1].get<char>();
+    coin.mintage = row[2].get<int>();
 }

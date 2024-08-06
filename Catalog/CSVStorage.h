@@ -1,8 +1,11 @@
 #pragma once
+#include"csv.hpp"
 #include"FileStorage.h"
 class CSVStorage:public FileStorage
 {
+	csv::CSVFormat format;
 public:
+	CSVStorage(std::string path);
 	Coin getCoinById(size_t id)const override;
 	Coin saveCoin(Coin coin)override;
 	std::vector<Coin> getCoins(Coin coin)const override;
