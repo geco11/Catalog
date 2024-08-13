@@ -14,7 +14,14 @@ std::vector<Coin> CSVStorage::getAllCoins()const
 
 size_t CSVStorage::writeCoins(std::vector<Coin>& coins)
 {
-    return size_t();
+    std::ofstream file(filePath, std::ios_base::out);
+    file << "Id,Mintmark,Mintage,Year,Country,Collection,Name,IsMagnetic,Weight,Diameter,Thickness,Condition,Quantity,Shape,Price,Nominal,PriceOfPurchase,Material\n";
+    auto writer = csv::make_csv_writer(file);
+    for (const Coin& coin : getAllCoins()) {
+        writer<<coin.getAllFieldsAsTuple();
+    }
+    file.close();
+    return getAllCoins().size();
 }
 
 

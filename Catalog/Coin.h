@@ -1,4 +1,5 @@
 #pragma once
+#include<tuple>
 #include<iostream>
 class Coin
 {
@@ -20,5 +21,24 @@ public:
 	float price=-1;
 	float priceOfPurchase=-1;
 	std::string material;
+	auto getAllFieldsAsTuple()const {
+		return std::make_tuple(id,
+			mintmark,
+			mintage,
+			year,
+			collection,
+			name,
+			IsMagnetic,
+			weight,
+			diameter,
+			thickness,
+			condition,
+			quantity,
+			country,
+			shape,
+			price,
+			priceOfPurchase,
+			material);
+	}
 };
 
