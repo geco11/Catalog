@@ -20,7 +20,18 @@ Coin FileStorage::getCoinById(size_t id) const
 
 Coin FileStorage::saveCoin(Coin coin)
 {
-   
+    std::vector<Coin> coins = getAllCoins();
+    Coin res;
+    for (Coin& curr : coins) {
+        if (curr.id == coin.id) 
+        {
+            res = curr;
+            curr = coin;
+            break;
+        }
+    }
+    writeCoins(coins);
+    return res;
 }
 
 std::vector<Coin> FileStorage::getCoins(Coin filter) const
@@ -34,6 +45,18 @@ std::vector<Coin> FileStorage::getCoins(Coin filter) const
             res.push_back(coin);
     }
     return res;
+}
+
+int FileStorage::importCoins(std::vector<Coin> additionalCoins)
+{
+    std::vector<Coin> coins=getAllCoins();
+    for (Coin& coin : additionalCoins) {
+        coin.id = getNextId();
+        setNextId(coin.id+1);
+        coins.push_back(coin);
+    }
+    writeCoins(coins);
+    return additionalCoins.size();
 }
 
 std::vector<std::string> FileStorage::getCountries() const
@@ -65,4 +88,20 @@ std::vector<Collection> FileStorage::getCollections(std::string country) const
         res.push_back(coll);
     }
     return res;
+}
+
+size_t FileStorage::getNextId()
+{
+    size_t id;
+    std::fstream file("LastId.txt", std::ios_base::in);
+    file>>id;
+    file.close();
+    return id;
+}
+
+void FileStorage::setNextId(size_t id)
+{
+    std::fstream file("LastId.txt", std::ios_base::out);
+    file << id;
+    file.close();
 }

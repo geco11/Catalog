@@ -131,7 +131,6 @@
     <ClCompile Include="Coin.cpp" />
     <ClCompile Include="CSVStorage.cpp" />
     <ClCompile Include="FileStorage.cpp" />
-    <ClCompile Include="IStorage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coin.h" />
@@ -139,7 +138,7 @@
     <ClInclude Include="csv.hpp" />
     <ClInclude Include="CSVStorage.h" />
     <ClInclude Include="FileStorage.h" />
-    <ClInclude Include="IStorage.h" />
+    <ClInclude Include="ICoinStorage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

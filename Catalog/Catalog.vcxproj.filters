@@ -24,9 +24,6 @@
     <ClCompile Include="FileStorage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IStorage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CSVStorage.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -38,7 +35,7 @@
     <ClInclude Include="FileStorage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IStorage.h">
+    <ClInclude Include="ICoinStorage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CSVStorage.h">

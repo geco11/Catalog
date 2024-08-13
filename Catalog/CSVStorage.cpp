@@ -12,10 +12,12 @@ std::vector<Coin> CSVStorage::getAllCoins()const
     return coins;
 }
 
-size_t CSVStorage::coinToString(Coin coin)
+size_t CSVStorage::writeCoins(std::vector<Coin>& coins)
 {
     return size_t();
 }
+
+
 
 CSVStorage::CSVStorage(std::string path):FileStorage(path)
 {
