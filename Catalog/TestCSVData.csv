@@ -1,0 +1,8 @@
+Id,Mintmark,Mintage,Year,Country,Collection,Name,IsMagnetic,Weight,Diameter,Thickness,Condition,Quantity,Shape,Price,Nominal,PriceOfPurchase,Material
+0,P,10000,2000,USA commemorative silver dollar,Statue of Liberty,0,26.72999,38.09999,2.70000,53,1,USA,Round,50.0,1.0,45.00
+1,S,20000,1986,USA commemorative silver dollar,Liberty,0,26.72999,38.09999,2.70000,51,1,USA,Round,30.0,1.0,25.00
+2,D,15000,1992,USA commemorative silver dollar,Columbus,0,26.72999,38.09999,2.70000,56,1,USA,Round,40.0,1.0,35.00
+3,W,12000,2021,USA commemorative silver dollar,Apollo 11,0,26.72999,38.09999,2.70000,53,1,USA,Round,60.0,1.0,55.00
+12,,-1,-1,USA commemorative silver dollar, test not a coin,14,-1.0,-1.0,-1.0,-1,-1,,,-1.0,-1.0,
+13,,-1,-1,,,14,-1.0,-1.0,-1.0,-1,-1,Antarctica,,-1.0,-1.0,
+14,,-1,-1,,,14,-1.0,-1.0,-1.0,-1,-1,,,-1.0,-1.0,
