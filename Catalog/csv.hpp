@@ -7479,6 +7479,7 @@ namespace csv {
      *
      */
 	CSV_INLINE CSVReader::CSVReader(csv::string_view filename, CSVFormat format) : _format(format) {
+
         auto head = internals::get_csv_head(filename);
         using Parser = internals::MmapParser;
 
