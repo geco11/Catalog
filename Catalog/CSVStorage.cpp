@@ -1,5 +1,6 @@
 #include "CSVStorage.h"
 #include"csv.hpp"
+#include<iomanip>
 static void fillCoin(Coin& coin, csv::CSVRow& row);
 std::vector<Coin> CSVStorage::getAllCoins()const
 {
@@ -17,6 +18,7 @@ std::vector<Coin> CSVStorage::getAllCoins()const
 size_t CSVStorage::writeCoins(std::vector<Coin>& coins)
 {
     std::ofstream file(filePath, std::ios_base::out);
+    file << std::setprecision(2);
     file << "Id,Mintmark,Mintage,Year,Country,Collection,Name,IsMagnetic,Weight,Diameter,Thickness,Condition,Quantity,Shape,Price,Nominal,PriceOfPurchase,Material\n";
     auto writer = csv::make_csv_writer(file);
     for (const Coin& coin : coins) {
