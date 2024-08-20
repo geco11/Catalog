@@ -23,9 +23,9 @@ size_t CSVStorage::writeCoins(std::vector<Coin>& coins)
     auto writer = csv::make_csv_writer(file);
     for (const Coin& coin : coins) {
         writer<<coin.getAllFieldsAsTuple();
-    }
+    }                 
     file.close();
-    return getAllCoins().size();
+    return coins.size();
 }
 
 
