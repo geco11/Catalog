@@ -3,11 +3,16 @@
 
 std::vector<Coin> Controller::search(Collection collection)
 {
-	return std::vector<Coin>();
+	Coin a;
+	a.collection = collection.getName();
+	return coinStorage->getCoins(a);
 }
 bool Controller::toggleMark(size_t id)
 {
-	return false;
+	Coin coin = coinStorage->getCoinById(id);
+	coin.IsFavorite++;
+	coinStorage->saveCoin(coin);
+	return coin.IsFavorite;
 }
 int Controller::increment(size_t id)
 {
@@ -25,11 +30,12 @@ int Controller::decrement(size_t id)
 }
 std::vector<std::string> Controller::getAllCountries()
 {
-	return std::vector<std::string>();
+	return coinStorage->getCountries();
 }
-std::vector<Collection> Controller::getCollections(std::string)
+std::vector<Collection> Controller::getCollections(std::string country)
 {
-	return std::vector<Collection>();
+	return coinStorage->getCollections(country);
+
 }
 Controller::Controller()
 {

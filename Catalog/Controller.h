@@ -11,7 +11,7 @@ public:
 	int decrement(size_t id);
 	/*int import(std::string);*/
     std::vector<std::string> getAllCountries();
-	std::vector<Collection> getCollections(std::string);
+	std::vector<Collection> getCollections(std::string country);
 	Controller();
 	~Controller();
 };
