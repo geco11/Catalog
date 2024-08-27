@@ -1,13 +1,9 @@
-#include"CSVStorage.h"
 #include <iostream>
-
+#include"Controller.h"
 int main()
 {
-	CSVStorage file("TestCSVData.csv");
-	Coin coin,coin1,coin2;
-	coin1.country = "Antarctica";
-	coin.name = " test not a coin";
-	coin.collection = "USA commemorative silver dollar";
-	auto x=file.importCoins({coin,coin1,coin2});
+	Controller controller;
+	controller.increment(2);
+
 	std::cout << "hello";
 }

@@ -9,6 +9,7 @@ public:
 	std::string mintmark = "";
 	int mintage = -1;
 	int year = -1;
+	bool IsFavorite = false;
 	std::string collection = "";
 	std::string name = "";
 	bool IsMagnetic;
@@ -39,7 +40,8 @@ public:
 			shape,
 			price,
 			priceOfPurchase,
-			material);
+			material,
+			IsFavorite?"true":"false");
 	}
 	static char conditionToNumber(std::string condition) {
 		std::unordered_map<std::string, char> mapping = {
