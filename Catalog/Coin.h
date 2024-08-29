@@ -1,4 +1,5 @@
 #pragma once
+#include<memory>
 #include<unordered_map>
 #include<tuple>
 #include<iostream>
@@ -84,4 +85,4 @@ public:
 
 	}
 };
-
+using CoinPtr = std::shared_ptr<Coin>;
