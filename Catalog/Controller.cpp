@@ -10,7 +10,7 @@ std::vector<Coin> Controller::search(Collection collection)
 bool Controller::toggleMark(size_t id)
 {
 	Coin coin = coinStorage->getCoinById(id);
-	coin.IsFavorite++;
+	coin.IsFavorite=!coin.IsFavorite;
 	coinStorage->saveCoin(coin);
 	return coin.IsFavorite;
 }

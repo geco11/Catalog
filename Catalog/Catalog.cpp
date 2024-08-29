@@ -3,7 +3,9 @@
 int main()
 {
 	Controller controller;
-	controller.increment(2);
+	Collection coll;
+	coll.setName("USA commemorative silver dollar");
+	auto x=controller.search(coll);
 
 	std::cout << "hello";
 }
