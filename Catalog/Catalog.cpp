@@ -1,11 +1,23 @@
 #include <iostream>
 #include"Controller.h"
-int main()
-{
+#include<rpc/server.h>
+int main(){
 	Controller controller;
-	Collection coll;
-	coll.setName("USA commemorative silver dollar");
-	auto x=controller.search(coll);
-
-	std::cout << "hello";
+	rpc::server server(8080);
+	server.bind("toggleMark", [&controller](size_t id) {
+		   return controller.toggleMark(id);
+	});
+	server.bind("getAllCountries", [&controller]() {
+		return controller.getAllCountries();
+	});
+	server.bind("getCollections", [&controller](const std::string& country) {
+		return controller.getCollections(country);
+	});
+	server.bind("increment",[&controller](size_t id){
+		return controller.increment(id);
+	});
+	server.bind("decrement",[&controller](size_t id){
+		return controller.decrement(id);
+	});
+	server.run();
 }
