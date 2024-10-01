@@ -1,6 +1,6 @@
 #pragma once
 #include<iostream>
-#include<rpc/server.h>
+#include <rpc/msgpack.hpp>
 class Collection {
 	std::string name="";
 	int countOfCoins = 0;
