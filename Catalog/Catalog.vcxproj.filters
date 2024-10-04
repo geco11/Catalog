@@ -30,6 +30,18 @@
     <ClCompile Include="Controller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RPCServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RPCCountries.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RPCCollections.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RPCCoins.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coin.h">
@@ -51,6 +63,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RPCServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RPCCountries.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RPCCollections.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RPCCoins.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

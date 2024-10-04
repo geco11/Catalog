@@ -1,8 +1,11 @@
 #include <iostream>
-#include"Controller.h"
-#include<rpc/server.h>
+#include"RPCCollections.h"
 int main(){
-	Controller controller;
+	std::unique_ptr<RPCServer> server=std::make_unique<RPCCollections>();
+	server->init(8080);
+	server->bindFunctions();
+	server->run();
+	/*Controller controller;
 	rpc::server server(8080);
 	server.bind("toggleMark", [&controller](size_t id) {
 		   return controller.toggleMark(id);
@@ -19,5 +22,5 @@ int main(){
 	server.bind("decrement",[&controller](size_t id){
 		return controller.decrement(id);
 	});
-	server.run();
+	server.run();*/
 }
