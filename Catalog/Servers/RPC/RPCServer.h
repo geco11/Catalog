@@ -1,6 +1,6 @@
 #pragma once
 #include<rpc/server.h>
-#include"Controller.h"
+#include"../../Controller.h"
 #include<memory>
 class RPCServer
 {

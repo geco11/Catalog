@@ -8,6 +8,7 @@ public:
 		server->bind("getAllCountries",[this](){
 			return controller->getAllCountries();
 		});
+		
 	}
 };
 

@@ -30,16 +30,16 @@
     <ClCompile Include="Controller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RPCServer.cpp">
+    <ClCompile Include="Servers\RPC\RPCServer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RPCCountries.cpp">
+    <ClCompile Include="Servers\RPC\RPCCountries.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RPCCollections.cpp">
+    <ClCompile Include="Servers\RPC\RPCCollections.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RPCCoins.cpp">
+    <ClCompile Include="Servers\RPC\RPCCoins.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,16 +65,16 @@
     <ClInclude Include="Controller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RPCServer.h">
+    <ClInclude Include="Servers\RPC\RPCServer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RPCCountries.h">
+    <ClInclude Include="Servers\RPC\RPCCountries.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RPCCollections.h">
+    <ClInclude Include="Servers\RPC\RPCCollections.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RPCCoins.h">
+    <ClInclude Include="Servers\RPC\RPCCoins.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

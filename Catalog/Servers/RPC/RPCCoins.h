@@ -15,6 +15,15 @@ public:
 		RPCCollections::bindFunctions();
 		server->bind("search", [this](const Collection& col) {
 			return PtrToCoin(controller->search(col));
+			});
+		server->bind("toggleMark", [this](size_t id) {
+			return controller->toggleMark(id);
+			});
+		server->bind("increment", [this](size_t id) {
+			return controller->increment(id);
+			});
+		server->bind("decrement", [this](size_t id) {
+			return controller->decrement(id);
 		});
 	}
 };

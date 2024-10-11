@@ -133,10 +133,10 @@
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="CSVStorage.cpp" />
     <ClCompile Include="FileStorage.cpp" />
-    <ClCompile Include="RPCCoins.cpp" />
-    <ClCompile Include="RPCCollections.cpp" />
-    <ClCompile Include="RPCCountries.cpp" />
-    <ClCompile Include="RPCServer.cpp" />
+    <ClCompile Include="Servers\RPC\RPCCoins.cpp" />
+    <ClCompile Include="Servers\RPC\RPCCollections.cpp" />
+    <ClCompile Include="Servers\RPC\RPCCountries.cpp" />
+    <ClCompile Include="Servers\RPC\RPCServer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Coin.h" />
@@ -146,10 +146,10 @@
     <ClInclude Include="CSVStorage.h" />
     <ClInclude Include="FileStorage.h" />
     <ClInclude Include="ICoinStorage.h" />
-    <ClInclude Include="RPCCoins.h" />
-    <ClInclude Include="RPCCollections.h" />
-    <ClInclude Include="RPCCountries.h" />
-    <ClInclude Include="RPCServer.h" />
+    <ClInclude Include="Servers\RPC\RPCCoins.h" />
+    <ClInclude Include="Servers\RPC\RPCCollections.h" />
+    <ClInclude Include="Servers\RPC\RPCCountries.h" />
+    <ClInclude Include="Servers\RPC\RPCServer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
