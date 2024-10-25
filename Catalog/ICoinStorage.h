@@ -1,7 +1,7 @@
 #pragma once
-#include"Coin.h"
+#include<Coin.h>
 #include<iostream>
-#include"Collection.h"
+#include<Collection.h>
 #include<vector>
 class ICoinStorage
 {

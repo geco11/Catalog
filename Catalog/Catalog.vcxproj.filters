@@ -18,7 +18,7 @@
     <ClCompile Include="Catalog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Coin.cpp">
+    <ClCompile Include="General\Coin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FileStorage.cpp">
@@ -42,9 +42,12 @@
     <ClCompile Include="Servers\RPC\RPCCoins.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="General\IController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Coin.h">
+    <ClInclude Include="General\Coin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FileStorage.h">
@@ -56,7 +59,7 @@
     <ClInclude Include="CSVStorage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Collection.h">
+    <ClInclude Include="General\Collection.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="csv.hpp">
@@ -75,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Servers\RPC\RPCCoins.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="General\IController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -24,6 +24,7 @@
     <ProjectGuid>{57fa58f7-8044-4ca4-8391-f5a9d69933aa}</ProjectGuid>
     <RootNamespace>Catalog</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <ProjectName>Server</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -105,6 +106,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\kopla\source\repos\CatalogProject\Catalog\Catalog\General;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,23 +131,25 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Catalog.cpp" />
-    <ClCompile Include="Coin.cpp" />
+    <ClCompile Include="General\Coin.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="CSVStorage.cpp" />
     <ClCompile Include="FileStorage.cpp" />
+    <ClCompile Include="General\IController.cpp" />
     <ClCompile Include="Servers\RPC\RPCCoins.cpp" />
     <ClCompile Include="Servers\RPC\RPCCollections.cpp" />
     <ClCompile Include="Servers\RPC\RPCCountries.cpp" />
     <ClCompile Include="Servers\RPC\RPCServer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Coin.h" />
-    <ClInclude Include="Collection.h" />
+    <ClInclude Include="General\Coin.h" />
+    <ClInclude Include="General\Collection.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="csv.hpp" />
     <ClInclude Include="CSVStorage.h" />
     <ClInclude Include="FileStorage.h" />
     <ClInclude Include="ICoinStorage.h" />
+    <ClInclude Include="General\IController.h" />
     <ClInclude Include="Servers\RPC\RPCCoins.h" />
     <ClInclude Include="Servers\RPC\RPCCollections.h" />
     <ClInclude Include="Servers\RPC\RPCCountries.h" />

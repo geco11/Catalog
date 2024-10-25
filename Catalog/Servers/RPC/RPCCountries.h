@@ -8,7 +8,7 @@ public:
 		server->bind("getAllCountries",[this](){
 			return controller->getAllCountries();
 		});
-		
+		puts("Countries binded");
 	}
 };
 

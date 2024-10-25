@@ -8,6 +8,7 @@ public:
 		server->bind("getCollections", [this](const std::string& country) {
 			return controller->getCollections(country);
 		});
+		puts("collections binded");
 	}
 };
 
