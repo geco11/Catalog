@@ -137,6 +137,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Catalog.cpp" />
+    <ClCompile Include="CSVUserStorage.cpp" />
     <ClCompile Include="General\Coin.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="CSVStorage.cpp" />
@@ -151,6 +152,7 @@
     <ClCompile Include="UserFileStorage.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CSVUserStorage.h" />
     <ClInclude Include="General\Coin.h" />
     <ClInclude Include="General\Collection.h" />
     <ClInclude Include="Controller.h" />

@@ -12,7 +12,5 @@ User UserFileStorage::getUserData(User target)
     return {"","",0 };
 }
 
-size_t UserFileStorage::addUser(std::string username, std::string password)
-{
-    return size_t();
-}
+
+
