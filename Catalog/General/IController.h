@@ -7,8 +7,8 @@ class IController
 
 public:
 	virtual bool addCollection(size_t userId,std::string_view collectioName)=0;
-	virtual bool registration(std::string_view UserName, std::string_view password)=0;
-	virtual size_t logIn(std::string_view UserName, std::string_view password) = 0;
+	virtual bool registration(const std::string& username, const std::string& password)=0;
+	virtual size_t logIn(const std::string& username, const std::string& password) = 0;
 	virtual std::vector<CoinPtr> search(size_t userId,Collection collection)=0;
 	virtual bool toggleMark(size_t userId,size_t coinId)=0;
 	virtual int increment(size_t userId,size_t coinId)=0;

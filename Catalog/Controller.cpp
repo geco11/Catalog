@@ -6,14 +6,21 @@ bool Controller::addCollection(size_t userId, std::string_view collectioName)
 	return false;
 }
 
-bool Controller::registration(std::string_view UserName, std::string_view password)
+bool Controller::registration(const std::string& username,const std::string& password)
 {
-	return false;
+	userStorage->addUser(username, password);
+	return true;
 }
 
-size_t Controller::logIn(std::string_view UserName, std::string_view password)
+size_t Controller::logIn(const std::string& username, const std::string& password)
 {
-	return size_t();
+	User u;
+	u.password = password;
+	u.username = username;
+	User user=userStorage->getUserData(u);
+	if (user.id == 0)
+		return 0;
+	return user.id;
 }
 
 std::vector<CoinPtr> Controller::search(size_t userId,Collection collection)
@@ -55,6 +62,9 @@ std::vector<Collection> Controller::getCollections(size_t userId,std::string_vie
 }
 Controller::Controller()
 {
+	userStorage = std::make_unique<CSVUserStorage>("Users.csv");
+	if (!userStorage)
+		std::cerr << "can't create a storage";
 	coinStorage = std::make_unique<CSVStorage>("TestCSVData.csv");
 	if (!coinStorage)
 		std::cerr << "can't create a storage";

@@ -1,5 +1,27 @@
 #include "UserFileStorage.h"
 #include<algorithm>
+#include<fstream>
+
+size_t UserFileStorage::getLastId()
+{
+    size_t id;
+    std::fstream file("LastUserId.txt", std::ios_base::in);
+    file >> id;
+    file.close();
+    return id;
+}
+
+void UserFileStorage::setLastId(size_t id)
+{
+    std::fstream file("LastUserId.txt", std::ios_base::out);
+    file << id;
+    file.close();
+}
+
+UserFileStorage::UserFileStorage(std::string_view path)
+{
+    filePath = path;
+}
 
 User UserFileStorage::getUserData(User target)
 {
@@ -14,5 +36,22 @@ User UserFileStorage::getUserData(User target)
 
 size_t UserFileStorage::addUser(const std::string& username, const std::string& password)
 {
-    
+    /*std::vector<CoinPtr> coins=getAllCoins();
+    for (CoinPtr& coin : additionalCoins) {
+        coin->id = getNextId();
+        setNextId(coin->id+1);
+        coins.push_back(coin);
+    }
+    writeCoins(coins);
+    return additionalCoins.size();*/
+    size_t id = getLastId();
+    setLastId(id+1);
+    User user;
+    user.id = id;
+    user.password = password;
+    user.username = username;
+    std::vector<User> users = getAllUsers();
+    users.push_back(user);
+    writeUsers(users);
+    return id;
 }

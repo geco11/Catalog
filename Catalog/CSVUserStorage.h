@@ -5,8 +5,9 @@ class CSVUserStorage:public UserFileStorage{
 	csv::CSVFormat format;
 	static User makeUser(csv::CSVRow& row);
 protected:
+	bool writeUsers(std::vector<User> users)override;
 	std::vector<User>getAllUsers()override;
 public:
-	size_t addUser(std::string username, std::string password)override;
+	//size_t addUser(std::string username, std::string password)override;
 };
 
