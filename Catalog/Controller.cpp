@@ -62,7 +62,7 @@ std::vector<Collection> Controller::getCollections(size_t userId,std::string_vie
 }
 Controller::Controller()
 {
-	userStorage = std::make_unique<CSVUserStorage>("Users.csv");
+	userStorage = std::make_unique<CSVUserStorage>("./Users.csv");
 	if (!userStorage)
 		std::cerr << "can't create a storage";
 	coinStorage = std::make_unique<CSVStorage>("TestCSVData.csv");

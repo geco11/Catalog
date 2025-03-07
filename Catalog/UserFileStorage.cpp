@@ -5,7 +5,7 @@
 size_t UserFileStorage::getLastId()
 {
     size_t id;
-    std::fstream file("LastUserId.txt", std::ios_base::in);
+    std::fstream file("./UsersData/LastUserId.txt", std::ios_base::in);
     file >> id;
     file.close();
     return id;
@@ -13,7 +13,7 @@ size_t UserFileStorage::getLastId()
 
 void UserFileStorage::setLastId(size_t id)
 {
-    std::fstream file("LastUserId.txt", std::ios_base::out);
+    std::fstream file("./UsersData/LastUserId.txt", std::ios_base::out);
     file << id;
     file.close();
 }

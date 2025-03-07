@@ -18,6 +18,10 @@ std::vector<CoinPtr> CSVStorage::getAllCoins()const
 size_t CSVStorage::writeCoins(std::vector<CoinPtr>& coins)
 {
     std::ofstream file(filePath, std::ios_base::out);
+    if (!file) {
+        std::cerr << "can't open file: " << filePath;
+        return 0;
+    }
     file << std::setprecision(2);
     file << "Id,Mintmark,Mintage,Year,Country,Collection,Name,IsMagnetic,Weight,Diameter,Thickness,Condition,Quantity,Shape,Price,PriceOfPurchase,Material,IsFavorite\n";
     auto writer = csv::make_csv_writer(file);
